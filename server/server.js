@@ -20,6 +20,15 @@ io.on('connection', (socket) => {
    	 createAt: 123
    });
 
+   socket.emit('newMessage', {
+      text: 'Need to do more',
+      createdAt: 321
+   });
+
+   socket.on('createMessage', (message) => {
+      console.log('createMessage', message);
+   });
+
    socket.on('disconnect', () => {
    	console.log('User was disconnected')
    });
