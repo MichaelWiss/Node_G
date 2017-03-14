@@ -13,3 +13,7 @@ var socket = io();
  	console.log('newMessage', message);
  });
 
+socket.emit('createMessage', {
+	from: 'Frank',
+	text: 'Hi'
+});
