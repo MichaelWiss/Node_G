@@ -16,4 +16,6 @@ var socket = io();
 socket.emit('createMessage', {
 	from: 'Frank',
 	text: 'Hi'
+}, function () {
+	console.log('Got it');
 });
