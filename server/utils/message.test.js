@@ -12,3 +12,9 @@ describe('generateMessage', () => {
     expect(message).toInclude({from, text});
   });
 });
+
+describe('generateLocationMessage', () => {
+	it('should generate correct location object', () =>
+		
+   });
+});
