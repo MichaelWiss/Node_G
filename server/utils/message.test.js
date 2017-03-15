@@ -19,6 +19,6 @@ describe('generateLocationMessage', () => {
 		var latitude = 15;
 		var longitude = 19;
 		var url = 'https://www.google.com/maps?=15,19';
-		var message = generateLocationMessage()
+		var message = generateLocationMessage(from, latitude, longitude);
    });
 });
