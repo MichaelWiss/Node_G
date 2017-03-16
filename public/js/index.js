@@ -13,7 +13,7 @@ var socket = io();
     var lastMessageHeight = newMessage.prev().innerHeight();
 
     if (clientHeight + scrollTop + newMessageHeight + lastMessageHeight >= scrollHeight) {
-      console.log('should scroll');
+      messages.scrollTop(scrollHeight);
     }
 }
 
