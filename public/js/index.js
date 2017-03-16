@@ -1,5 +1,20 @@
 var socket = io();
 
+ function scrollToBottom() {
+    //selectors
+    var messages = jQuery('#messages');
+    var newMessage = messages.children('li:last-child')
+
+    //heights
+    var clientHeight = messages.prop('clientHeight');
+    var scrollTop = messages.prop('scrollTop');
+    var scrollHeight = messages.prop('scrollHeight');
+
+    if (clientHeight + scrollTop >= scrollHeight) {
+      console.log('should scroll');
+    }
+}
+
  socket.on('connect', function () {
     console.log('connected to server');
 
