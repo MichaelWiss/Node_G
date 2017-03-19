@@ -22,9 +22,9 @@ var socket = io();
 
     socket.emit('join' params, function (err) {
        if (err) {
-
+           window.location.href = '/';
        } else {
-       	
+
        }
     });
 });
