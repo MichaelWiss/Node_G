@@ -20,7 +20,8 @@ var socket = io();
  socket.on('connect', function () {
     var params = jQuery.deparam(window.location.search);
 
- });
+    socket.emit('join')
+});
 
  socket.on('disconnect', function () {
  	console.log('Disconnected from server');
