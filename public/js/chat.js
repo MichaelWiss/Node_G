@@ -20,7 +20,13 @@ var socket = io();
  socket.on('connect', function () {
     var params = jQuery.deparam(window.location.search);
 
-    socket.emit('join')
+    socket.emit('join' params, function (err) {
+       if (err) {
+
+       } else {
+       	
+       }
+    });
 });
 
  socket.on('disconnect', function () {
