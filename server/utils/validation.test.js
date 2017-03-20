@@ -14,5 +14,8 @@ const expect = require('expect');
     	var res = isRealString('     ');
     	expect(res).toBe(false);
    });
-    it
+    it('should allow string with non-space characters', () => {
+    	var res = isRealString('  Andrew  ');
+    	expect(res).toBe(true)
+   });
 });
