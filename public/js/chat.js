@@ -25,7 +25,7 @@ var socket = io();
        	   alert(err);
            window.location.href = '/';
        } else {
-
+        console.log('No Error');
        }
     });
 });
