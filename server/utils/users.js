@@ -21,6 +21,8 @@ class Users {
 
 }
 
+module.exports = {Users};
+
 // class Person {
 //    constructor (name, age) {
 //      console.log(name, age);
