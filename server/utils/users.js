@@ -24,8 +24,9 @@ class Users {
 	getUser (id) {
 
 	}
-	getUserList (room)
+	getUserList (room) {
 
+	}
 }
 
 module.exports = {Users};
