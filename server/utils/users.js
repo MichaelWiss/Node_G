@@ -18,6 +18,13 @@ class Users {
 		this.users.push(user);
         return user;
 	}
+	removeUser(id) {
+		// return user that was removed
+	}
+	getUser (id) {
+
+	}
+	getUserList (room)
 
 }
 
