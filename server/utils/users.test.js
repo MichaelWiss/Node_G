@@ -14,13 +14,13 @@ describe('Users', () => {
       	room: 'Node Course'
       }, {
       	id: '2',
-      	name: 'Mike',
-      	room: 'Node Course'
+      	name: 'Jen',
+      	room: 'React Course'
       }, {
       	id: '3',
-      	name: 'Mike',
+      	name: 'Julie',
       	room: 'Node Course'
-      }]
+      }];
 	});
    
    it('should add new user', () => {
