@@ -36,6 +36,8 @@ describe('Users', () => {
    });
 
    it('should return names for node course', () => {
-      var userList = users
+      var userList = users.getUserList('Node Course');
+
+      expect(userList).toEqual(['Mike', 'Julie']);
    });
 });
