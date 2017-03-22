@@ -10,6 +10,9 @@ describe('Users', () => {
    		id: '123',
    		name: 'Michael',
    		room: 'The Office Fans'
-   	}
+   	};
+   	var resUser = users.addUser(user.id, user.name, user.room);
+
+   	
    });
 });
