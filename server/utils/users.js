@@ -12,7 +12,14 @@
 class Person {
    constructor (name, age) {
      console.log(name, age);
+     this.name = name;
+     this.age = age;
+   }
+   getUserDescription() {
+   	return `${this.name} is ${this.age} old.`;
    }
 }
 
-var me = new Person("michael", 45);
+var me = new Person("michael", 30);
+var description = me.getUserDescription();
+console.log(description);
