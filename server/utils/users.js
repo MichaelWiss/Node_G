@@ -22,9 +22,9 @@ class Users {
 		var user = this.getUser(id);
 
 		if (user) {
-           this.users = this.user.filter((user) => user.id !== id);
+           this.users = this.users.filter((user) => user.id !== id);
 		}
-		
+
 		return user;
 	}
 	getUser (id) {
