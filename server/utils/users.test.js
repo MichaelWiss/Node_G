@@ -40,4 +40,10 @@ describe('Users', () => {
 
       expect(userList).toEqual(['Mike', 'Julie']);
    });
+   
+    it('should return names for react course', () => {
+      var userList = users.getUserList('React Course');
+
+      expect(userList).toEqual([ 'Jen']);
+   });
 });
