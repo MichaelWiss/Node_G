@@ -60,7 +60,7 @@ describe('Users', () => {
    	  var userId = '99';
       var user = users.getUser(userId);
 
-      
+      expect(user).toNotExist();
 
    });
 
