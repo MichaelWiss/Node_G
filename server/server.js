@@ -23,11 +23,11 @@ io.on('connection', (socket) => {
 
    socket.on('join', (params, callback) => {
        if (!isRealString(params.name) || !isRealString(params.room)){
-         callback('Name and room name are required');
+         return callback('Name and room name are required');
        }
 
          socket.join(params.room);
-
+         users.removeUser(socket.id);
          users.addUser(socket.id, params.name, params.room);
 
          socket.emit('newMessage', generateMessage('Admin', 'Welcome to the chat app'));
