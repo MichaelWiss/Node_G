@@ -30,6 +30,8 @@ io.on('connection', (socket) => {
          users.removeUser(socket.id);
          users.addUser(socket.id, params.name, params.room);
 
+         io.to(params.room).emit('updateUserList', users.getUserList(params.room));
+
          socket.emit('newMessage', generateMessage('Admin', 'Welcome to the chat app'));
    
 
@@ -50,7 +52,13 @@ io.on('connection', (socket) => {
    })
 
    socket.on('disconnect', () => {
-   	console.log('User was disconnected')
+      var user = users.removeUser(socket.id);
+
+      if (user) {
+         io.to(user.room).emit();
+         io.to().emit();
+      }
+   	
    });
 });
 
