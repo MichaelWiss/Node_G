@@ -61,7 +61,8 @@ socket.on('updateUserList', function (users) {
     var template = jQuery('#location-message-template').html();
     var html = Mustache.render(template, {
     	from: message.from,
- 		createdAt: formattedTime 
+      url: message.url,
+ 		  createdAt: formattedTime 
  	});
  	
  	jQuery('#messages').append(html);
