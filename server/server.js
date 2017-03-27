@@ -55,7 +55,7 @@ io.on('connection', (socket) => {
        var user = users.getUser(socket);
        
        if (user) {
-          io.emit.to(user.room)('newLocationMessage', generateLocationMessage('Admin', coords.latitude, coords.longitude));
+          io.emit.to(user.room)('newLocationMessage', generateLocationMessage(user.name, coords.latitude, coords.longitude));
        }
 
    	 
