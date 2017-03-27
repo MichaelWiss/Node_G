@@ -52,9 +52,14 @@ io.on('connection', (socket) => {
    });
 
    socket.on('createLocationMessage', (coords) => {
-       var user = users.getUser(socket.id);
-   	 io.emit('newLocationMessage', generateLocationMessage('Admin', coords.latitude, coords.longitude));
-   })
+       var user = users.getUser(socket);
+       
+       if (user) {
+          io.emit.to(user.room)('newLocationMessage', generateLocationMessage('Admin', coords.latitude, coords.longitude));
+       }
+
+   	 
+   });
 
    socket.on('disconnect', () => {
       var user = users.removeUser(socket.id);
