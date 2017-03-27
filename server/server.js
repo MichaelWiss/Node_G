@@ -52,14 +52,12 @@ io.on('connection', (socket) => {
    });
 
    socket.on('createLocationMessage', (coords) => {
-       var user = users.getUser(socket);
+       var user = users.getUser(socket.id);
        
        if (user) {
-          io.emit.to(user.room)('newLocationMessage', generateLocationMessage(user.name, coords.latitude, coords.longitude));
+          io.to(user.room).emit('newLocationMessage', generateLocationMessage(user.name, coords.latitude, coords.longitude));
        }
-
-   	 
-   });
+});
 
    socket.on('disconnect', () => {
       var user = users.removeUser(socket.id);
